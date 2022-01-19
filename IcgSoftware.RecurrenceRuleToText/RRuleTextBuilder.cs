@@ -126,13 +126,7 @@ namespace IcgSoftware.RecurrenceRuleToText
                     case FrequencyType.Weekly:
                         if (recurrencePattern.IsWeekdays())
                         {
-                            frequency = "";
                             day = Language.WeeklyEveryWeekday;
-                        }
-                        else if (recurrencePattern.IsEveryDay())
-                        {
-                            frequency = "";
-                            day = Language.WeeklyEveryDay;
                         }
                         else
                             day += BuildWeeklyDays();

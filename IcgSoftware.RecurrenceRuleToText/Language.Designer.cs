@@ -385,7 +385,7 @@ namespace IcgSoftware.RecurrenceRuleToText {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to every weekday.
+        ///   Looks up a localized string similar to on weekdays.
         /// </summary>
         internal static string WeeklyEveryWeekday {
             get {

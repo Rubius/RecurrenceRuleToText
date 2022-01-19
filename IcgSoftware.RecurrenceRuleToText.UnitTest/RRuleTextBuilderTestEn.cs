@@ -46,6 +46,8 @@ namespace IcgSoftware.RecurrenceRuleToText.UnitTest
             ToTextTest("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU", "every 2 weeks on Monday, Tuesday");
             //RRuleTextBuilderTestHelper.ToStringTest("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU,WE,SA", "Every 2 weeks on Mon, Tue, Wed, Sat");
             ToTextTest("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU,WE,SA", "every 2 weeks on Monday, Tuesday, Wednesday, Saturday");
+            ToTextTest("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR", "every 2 weeks on weekdays");
+            ToTextTest("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR,SA,SU", "every 2 weeks on Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
 
             ToTextTest("FREQ=MONTHLY;INTERVAL=1;BYMONTHDAY=5", "every month on the 5th");
             ToTextTest("FREQ=MONTHLY;INTERVAL=1;BYMONTHDAY=15", "every month on the 15th");

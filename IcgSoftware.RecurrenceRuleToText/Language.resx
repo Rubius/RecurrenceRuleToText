@@ -191,7 +191,7 @@
     <value>for {0} times</value>
   </data>
   <data name="WeeklyEveryWeekday" xml:space="preserve">
-    <value>every weekday</value>
+    <value>on weekdays</value>
   </data>
   <data name="WeeklyEveryDay" xml:space="preserve">
     <value>every day</value>

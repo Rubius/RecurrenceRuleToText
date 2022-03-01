@@ -413,7 +413,9 @@ namespace IcgSoftware.RecurrenceRuleToText
                 if (recurrencePattern.Until == DateTime.MinValue)
                     return null;
 
-                return String.Format(Language.UntilDateEnding, recurrencePattern.Until.ToString(Language.UntilDateEndingDateFormat, Language.Culture));
+                var dateFormat = recurrencePattern.Until.Year == DateTime.Today.Year ? "MMMM dd" : Language.UntilDateEndingDateFormat;
+                
+                return String.Format(Language.UntilDateEnding, recurrencePattern.Until.ToString(dateFormat, Language.Culture));
             }
 
             private String BuildCountEnding()

@@ -66,6 +66,8 @@ namespace IcgSoftware.RecurrenceRuleToText.UnitTest
             ToTextTest("FREQ=DAILY;INTERVAL=1;COUNT=2", "every day for 2 times");
             ToTextTest("FREQ=WEEKLY;INTERVAL=1;COUNT=1", "every week for 1 times");
             ToTextTest("FREQ=MONTHLY;INTERVAL=1;UNTIL=20181023T220000Z", "every month until October 23, 2018");
+            var currentYear = DateTime.Today.Year;
+            ToTextTest($"FREQ=MONTHLY;INTERVAL=1;UNTIL={currentYear}1023T220000Z", "every month until October 23");
         }
 
         [TestMethod]

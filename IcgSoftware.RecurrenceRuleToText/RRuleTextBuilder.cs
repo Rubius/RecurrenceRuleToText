@@ -421,9 +421,6 @@ namespace IcgSoftware.RecurrenceRuleToText
                 if (recurrencePattern.Count == int.MinValue)
                     return null;
 
-                if (recurrencePattern.Count == 1)
-                    return null;
-
                 return String.Format(Language.CountEnding, recurrencePattern.Count);
             }
 

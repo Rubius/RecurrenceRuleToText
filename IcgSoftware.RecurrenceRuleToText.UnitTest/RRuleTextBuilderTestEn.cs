@@ -64,14 +64,14 @@ namespace IcgSoftware.RecurrenceRuleToText.UnitTest
             ToTextTest("FREQ=YEARLY;BYDAY=WE;BYSETPOS=-1;BYMONTH=4", "every year on last Wednesday of April"); //jakubroztocil liefert: every April on Wednesday
 
             ToTextTest("FREQ=DAILY;INTERVAL=1;COUNT=2", "every day for 2 times");
-            ToTextTest("FREQ=WEEKLY;INTERVAL=1;COUNT=1", "every week"); //jakubroztocil liefert: every week for 1 time
+            ToTextTest("FREQ=WEEKLY;INTERVAL=1;COUNT=1", "every week for 1 times");
             ToTextTest("FREQ=MONTHLY;INTERVAL=1;UNTIL=20181023T220000Z", "every month until October 23, 2018");
         }
 
         [TestMethod]
         public void Custom()
         {
-            ToTextTest("FREQ=WEEKLY;COUNT=30;INTERVAL=1;WKST=MO;BYDAY=FR,TH,MO,TU,WE", "every weekday for 30 times");
+            ToTextTest("FREQ=WEEKLY;COUNT=30;INTERVAL=1;WKST=MO;BYDAY=FR,TH,MO,TU,WE", "every week on weekdays for 30 times");
             ToTextTest("FREQ=WEEKLY;COUNT=30;INTERVAL=1;WKST=MO;BYDAY=FR,TU,WE,TH", "every week on Tuesday, Wednesday, Thursday, Friday for 30 times");
             ToTextTest("FREQ=WEEKLY;COUNT=30;INTERVAL=1;WKST=SU;BYDAY=FR,TU,WE,TH,SU", "every week on Sunday, Tuesday, Wednesday, Thursday, Friday for 30 times"); //jakubroztocil liefert (keine Beachtung von Wochenanfang): every week on Tuesday, Wednesday, Thursday, Friday, Sunday for 30 times
             ToTextTest("FREQ=MONTHLY;INTERVAL=2;BYDAY=FR;BYSETPOS=1", "every 2 months on first Friday");
@@ -97,7 +97,7 @@ namespace IcgSoftware.RecurrenceRuleToText.UnitTest
 
 
             //Text input
-            ToTextTest("RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR", "every weekday");
+            ToTextTest("RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR", "every week on weekdays");
             ToTextTest("RRULE:INTERVAL=2;FREQ=WEEKLY;BYDAY=TU", "every 2 weeks on Tuesday");
             ToTextTest("RRULE:FREQ=WEEKLY;BYDAY=MO,WE", "every week on Monday, Wednesday");
             ToTextTest("RRULE:FREQ=MONTHLY;BYDAY=-2FR;COUNT=7", "every month on the 2nd last Friday for 7 times");
@@ -106,7 +106,7 @@ namespace IcgSoftware.RecurrenceRuleToText.UnitTest
             //extra
             ToTextTest("FREQ=MONTHLY;BYMONTHDAY=10,15,21;COUNT=20", "every month on the 10th, 15th and 21st for 20 times");
             ToTextTest("FREQ=MONTHLY;BYDAY=2FR;COUNT=7", "every month on the 2nd Friday for 7 times");
-            ToTextTest("FREQ=WEEKLY;BYDAY=SU,SA,MO,TU,WE,TH,FR", "every day");
+            ToTextTest("FREQ=WEEKLY;BYDAY=SU,SA,MO,TU,WE,TH,FR", "every week on Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
             ToTextTest("RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TU", "every 2 weeks on Tuesday");
         }
 

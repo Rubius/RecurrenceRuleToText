@@ -61,7 +61,7 @@ namespace IcgSoftware.RecurrenceRuleToText.UnitTest
             ToTextTest("FREQ=YEARLY;BYDAY=WE;BYSETPOS=-1;BYMONTH=4", "cada año el último miércoles de abril");
 
             ToTextTest("FREQ=DAILY;INTERVAL=1;COUNT=2", "cada día un total de 2 veces"); 
-            ToTextTest("FREQ=WEEKLY;INTERVAL=1;COUNT=1", "cada semana");
+            ToTextTest("FREQ=WEEKLY;INTERVAL=1;COUNT=1", "cada semana un total de 1 veces");
             ToTextTest("FREQ=MONTHLY;INTERVAL=1;UNTIL=20181023T220000Z", "cada mes hasta el martes, 23 de octubre de 2018");
 
         }
